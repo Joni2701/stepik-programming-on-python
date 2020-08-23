@@ -4,7 +4,8 @@ teams = dict()
 #0 всего игр - 1 побед - 2 ничьих - 3 поражений - 4 всего очков
 for i in range(n):
     team1, score1, team2, score2 = input().split(';')
-
+    score1, score2 = int(score1), int(score2) #            <-------------
+    
     if team1 not in teams.keys():
         teams[team1] = [0, 0, 0, 0, 0]
     if team2 not in teams.keys():
